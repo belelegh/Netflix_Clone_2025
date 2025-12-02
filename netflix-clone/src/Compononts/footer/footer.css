@@ -1,0 +1,184 @@
+.footer-outer-container {
+  background-color: #141414;
+  border-top: 1px solid #333;
+  padding: 60px 0 30px;
+  margin-top: 80px;
+  color: #808080;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.footer-inner-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Social Icons */
+.footer-iccons {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 40px;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-iccons .MuiSvgIcon-root {
+  font-size: 30px;
+  color: #808080;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-iccons .MuiSvgIcon-root:hover {
+  color: #e5e5e5;
+  transform: translateY(-2px);
+}
+
+/* Footer Links Grid */
+.footer-data {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px 60px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.footer-data div ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-data div ul li {
+  color: #808080;
+  font-size: 13px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-align: left;
+}
+
+.footer-data div ul li:hover {
+  color: #e5e5e5;
+  text-decoration: underline;
+}
+
+/* Service Code Button */
+.service-code {
+  margin: 20px 0 30px;
+  text-align: center;
+}
+
+.service-code p {
+  color: #808080;
+  font-size: 13px;
+  border: 1px solid #333;
+  padding: 8px 12px;
+  margin: 0;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-code p:hover {
+  color: #e5e5e5;
+  border-color: #808080;
+}
+
+/* Copyright */
+.copy-write {
+  color: #808080;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  .footer-data {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 40px;
+  }
+  
+  .footer-outer-container {
+    padding: 50px 0 20px;
+  }
+  
+  .footer-iccons .MuiSvgIcon-root {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-inner-container {
+    padding: 0 20px;
+  }
+  
+  .footer-data {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .footer-data div ul li {
+    text-align: center;
+  }
+  
+  .footer-iccons {
+    gap: 20px;
+  }
+  
+  .footer-iccons .MuiSvgIcon-root {
+    font-size: 26px;
+  }
+  
+  .footer-outer-container {
+    padding: 40px 0 20px;
+    margin-top: 60px;
+  }
+}
+/* Optional: Animation for hover effects */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-outer-container {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Optional: Dark mode support (if needed) */
+@media (prefers-color-scheme: light) {
+  .footer-outer-container {
+    background-color: #f3f3f3;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-data div ul li,
+  .footer-iccons .MuiSvgIcon-root,
+  .service-code p,
+  .copy-write {
+    color: #666;
+  }
+  
+  .service-code p {
+    border-color: #ddd;
+  }
+  
+  .footer-data div ul li:hover {
+    color: #333;
+  }
+  
+  .footer-iccons .MuiSvgIcon-root:hover {
+    color: #333;
+  }
+}
